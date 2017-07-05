@@ -1,7 +1,6 @@
 /**
  * http://usejsdoc.org/
  */
-console.log('Carregando...');
 
 /* Captura o valor do campos valor e total do formulário */
 
