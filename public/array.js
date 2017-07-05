@@ -2,30 +2,45 @@
  * http://usejsdoc.org/
  */
 
-/*Criando Arrya*/
-var celulares=[];
+/* Criando Arrya */
+var celulares = [];
 
-/*Adicionando elementos no Array*/
+/* Adicionando elementos no Array */
 celulares.push('j5');
 celulares.push('MotoE');
 
-/*Listando Array*/
+/* Listando Array */
 console.log(celulares);
 
-/*colocando elementos no inicio do Array*/
+/* colocando elementos no inicio do Array */
 celulares.unshift('Iphone5');
 
-/*Listando Array*/
+/* Listando Array */
 console.log(celulares);
 
-/*Retirando do fim do Array*/
-console.log('Item retirado do final do Array: ',celulares.pop());
+/* Percorrendo o Array com for tradicional */
+console.log('');
+for (var i = 0; i < celulares.length; i++) {
+	console.log(celulares[i]);
+}
+console.log('');
 
-/*Listando Array*/
+
+/*usando o ForEach*/
+
+celulares.forEach(function(e){
+	console.log(e);
+});
+console.log('');
+
+/* Retirando do fim do Array */
+console.log('Item retirado do final do Array: ', celulares.pop());
+
+/* Listando Array */
 console.log(celulares);
 
-/*Retirando do Início do Array*/
-console.log('Item retirado do Início do Array: ',celulares.shift());
+/* Retirando do Início do Array */
+console.log('Item retirado do Início do Array: ', celulares.shift());
 
-/*Listando Array*/
+/* Listando Array */
 console.log(celulares);
