@@ -44,3 +44,20 @@ console.log('Item retirado do Início do Array: ', celulares.shift());
 
 /* Listando Array */
 console.log(celulares);
+
+/*Criando um novo Array para usar toString e Join*/
+console.log('');
+var nomes=[];
+nomes.push('João');
+nomes.push('Maria');
+nomes.push('Paulo');
+nomes.push('Luiz');
+nomes.push('Madalena');
+
+console.log(nomes);
+console.log('com toString');
+var emString=nomes.toString();
+console.log(emString);
+console.log('');
+console.log('com join');
+console.log(nomes.join(' - '));
