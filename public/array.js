@@ -61,3 +61,5 @@ console.log(emString);
 console.log('');
 console.log('com join');
 console.log(nomes.join(' - '));
+
+console.log(process.version);
