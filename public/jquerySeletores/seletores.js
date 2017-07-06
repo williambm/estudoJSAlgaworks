@@ -3,5 +3,10 @@
  */
 $(function(){
 	var selecaoTodosUsuarios = $('#selecao-todos-usuarios');
-	console.log('Seleção de todos os usuários: ',selecaoTodosUsuarios);
+	var selecaoUsuarios = $('.js-selecao-usuario');
+	
+	selecaoUsuarios.on('click', function() {
+		
+	});
+	
 });
