@@ -15,7 +15,8 @@ $(function(){
 		estados.forEach(function(estado){
 			var optionEstado = $('<option>').val(estado.uf).text(estado.nome);
 			console.log(optionEstado);
-			comboEstado.append(optionEstado);							
+			comboEstado.append(optionEstado);
+										
 		});
 	});
 	
