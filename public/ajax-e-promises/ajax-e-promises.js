@@ -1,7 +1,7 @@
 /**
  * http://usejsdoc.org/
  */
-$(function(){
+var resposta = $(function(){
 	$.ajax({
 		url:'http://localhost:8080/estados',
 		method:'GET',
@@ -10,5 +10,12 @@ $(function(){
 
 });
 
+resposta.done(function(){
+	console.log('tudo certo',estados);
+});
+
+resposta.done(function(){
+	console.log('Funcionou mesmo !!!');
+});
 
  
