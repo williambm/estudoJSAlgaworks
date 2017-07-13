@@ -10,9 +10,12 @@ $(function(){
 
 	resposta.done(function(estados){
 		var comboEstado = $('#combo-estado');
+		//comboEstado.empty();
+		comboEstado.html('<option>Selecione o estado</option>');
 		estados.forEach(function(estado){
 			var optionEstado = $('<option>').val(estado.uf).text(estado.nome);
-			console.log(optionEstado);				
+			console.log(optionEstado);
+			comboEstado.append(optionEstado);							
 		});
 	});
 	
