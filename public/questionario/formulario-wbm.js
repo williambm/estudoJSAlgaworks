@@ -1,4 +1,4 @@
-$(function() {
+﻿$(function()  {
     $("select").change(function () {
         
     var selecao = "";
