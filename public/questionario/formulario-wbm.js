@@ -11,7 +11,7 @@
         atividadesMasculinas = ("<div class='checkbox atividades'><label><input type='checkbox' value='1'>Tomar cerveja</label><br>" +
                               "<label><input type='checkbox' value='2'>Pedalar</label><br>" +
                               "<label><input type='checkbox' value='3'>Jogar Videogame</label><br>" ),
-        fechaDiv = "</div>";
+        fechaDiv = "</div></div>";
         
         
         
@@ -28,6 +28,10 @@
             } else {
                 $(".escolha-genero").append(htmlMasculino);
             }
+        
+        $("#comboGenero").on('click', function(){ //Tentativa de criar um evento para realizar a limpeza onclick
+           $(this).closest().remove();
+        });
     });
     
 });
