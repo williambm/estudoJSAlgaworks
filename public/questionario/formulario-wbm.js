@@ -2,16 +2,32 @@
     $("select").change(function () {
         
     var selecao = "";
-    var $divFeminino = "<div class='form-group'><label>Nome</label></div>";//qual a melhor forma de inserir conteúdo por html com jquery??
+    var $abreDivForm = "<div class='form-group'>",
+        nome = "<label>Nome</label><input class='form-control'></input>",
+        pergunta = "<br><label>Quais destas atividades você mais gosta?</label>",
+        atividadesFemininas = ("<div class='checkbox atividades'><label><input type='checkbox' value='1'>Correr no parque</label><br>" +
+                              "<label><input type='checkbox' value='2'>Pedalar</label><br>" +
+                              "<label><input type='checkbox' value='3'>Jogar Volei</label><br>" ),
+        atividadesMasculinas = ("<div class='checkbox atividades'><label><input type='checkbox' value='1'>Tomar cerveja</label><br>" +
+                              "<label><input type='checkbox' value='2'>Pedalar</label><br>" +
+                              "<label><input type='checkbox' value='3'>Jogar Videogame</label><br>" ),
+        fechaDiv = "</div>";
+        
+        
+        
         $('select option:selected').each(function() {
            selecao = $(this).text();
         });
         console.log(selecao);
         console.log(typeof($divFeminino));
-        $("select").append($divFeminino);
+        var htmlFeminino = $abreDivForm+nome+pergunta+atividadesFemininas+fechaDiv;
+        var htmlMasculino = $abreDivForm+nome+pergunta+atividadesMasculinas+fechaDiv;
+            
             if(selecao === "Feminino") {
-                $(".escolha-genero").html("<h2>Foi!</h2>");//a forma de usar o append está errada, por que ???Resp.1 -> estou apenas fazendo replace.... mas não estou inserindo um novo elemento este está sendo o problema!!
-        } 
+                $(".escolha-genero").append(htmlFeminino);//Inserido no fim da div do form-group, funciona.
+            } else {
+                $(".escolha-genero").append(htmlMasculino);
+            }
     });
     
 });
