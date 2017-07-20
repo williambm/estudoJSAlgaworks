@@ -1,8 +1,8 @@
-﻿$(function()  {
+﻿$(function() {
     $("select").change(function () {
         
     var selecao = "";
-    var $abreDivForm = "<div class='form-group'>",
+    var $abreDivForm = "<div class='form-group form-atividade'>",
         nome = "<label>Nome</label><input class='form-control'></input>",
         pergunta = "<br><label>Quais destas atividades você mais gosta?</label>",
         atividadesFemininas = ("<div class='checkbox atividades'><label><input type='checkbox' value='1'>Correr no parque</label><br>" +
@@ -29,9 +29,10 @@
                 $(".escolha-genero").append(htmlMasculino);
             }
         
-        $("#comboGenero").on('click', function(){ //Tentativa de criar um evento para realizar a limpeza onclick
-           $(this).closest().remove();
+            $("#comboGenero").on('change',function(){ //Tentativa de criar um evento para realizar a limpeza on change.
+            $('.form-atividade').closest('div').remove('label');            
         });
-    });
-    
+       
+    });   
+      
 });
