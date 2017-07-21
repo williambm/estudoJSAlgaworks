@@ -24,14 +24,12 @@
         var htmlMasculino = $abreDivForm+nome+pergunta+atividadesMasculinas+fechaDiv;
             
             if(selecao === "Feminino") {
-                $(".escolha-genero").append(htmlFeminino);//Inserido no fim da div do form-group, funciona.
+                $(".form-atividade").empty();//Caso já haja uma div inserida anteriormente ele limpa o elemento.
+                $(".escolha-genero").append(htmlFeminino);//Inserido no fim da div do form-group, funciona.               
             } else {
-                $(".escolha-genero").append(htmlMasculino);
-            }
-        
-            $("#comboGenero").on('change',function(){ //Tentativa de criar um evento para realizar a limpeza on change.
-            $('.form-atividade').closest('div').remove('label');            
-        });
+                $(".form-atividade").empty();
+                $(".escolha-genero").append(htmlMasculino);               
+            }          
        
     });   
       
